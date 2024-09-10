@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Link from "next/link";
 
 // Importación de estilos globales y de bootstrap
 import "./bootstrap-icons.css";
@@ -47,14 +48,14 @@ export default function RootLayout({
             <nav>
               <ul className="nav">
                 <li className="nav-item">
-                  <a href="/" className="nav-link text-light">
+                  <Link href="/" className="nav-link text-light">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a href="/contacto" className="nav-link text-light">  {/* Cambiado a /contacto */}
+                  <Link href="/contacto" className="nav-link text-light">  {/* Cambiado a /contacto */}
                     Contacto
-                  </a>
+                  </Link>
                 </li>
                 {/* Mostrar cuando el usuario está logueado */}
                 <li className="nav-item">
