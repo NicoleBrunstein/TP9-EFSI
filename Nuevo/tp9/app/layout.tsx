@@ -40,20 +40,20 @@ export default function RootLayout({
         {/* Encabezado con logo y menú de navegación */}
         <header className="bg-dark text-light py-3">
           <div className="container d-flex justify-content-between align-items-center">
-            <div className="logo">
-              <a href="/" className="text-light text-decoration-none">
-                <h1>Eventos</h1>
-              </a>
+            <div className="logo d-flex align-items-center">
+              <Link href="/" className="text-light text-decoration-none">
+                <img src="/images/logo.png" alt="Logo" style={{ height: '70px' }} />
+              </Link>
             </div>
             <nav>
-              <ul className="nav">
+              <ul className="nav d-flex align-items-center">
                 <li className="nav-item">
-                  <Link href="/" className="nav-link text-light">
+                  <Link href="/index" className="nav-link text-light">
                     Home
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/contacto" className="nav-link text-light">  {/* Cambiado a /contacto */}
+                  <Link href="/contacto" className="nav-link text-light">
                     Contacto
                   </Link>
                 </li>

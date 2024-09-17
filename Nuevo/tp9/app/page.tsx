@@ -1,26 +1,26 @@
 "use client";
-import Link from "next/link";
 
-// Simulación de eventos
-const events = [
-  { id: 1, title: "Concierto de Rock", date: "2024-10-05", place: "Buenos Aires" },
-  { id: 2, title: "Exposición de Arte", date: "2024-11-12", place: "Mendoza" },
-  // Más eventos...
-];
+import { useRouter } from "next/navigation";
 
-export default function Home() {
+export default function Login() {
+  const router = useRouter();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    router.push("/");
+  };
+
   return (
-    <div className="home-container">
-      <h1>Eventos Disponibles</h1>
-      <ul>
-        {events.map((event) => (
-          <li key={event.id}>
-            <h3>{event.title}</h3>
-            <p>Fecha: {event.date} - Lugar: {event.place}</p>
-            <Link href={`/event/${event.id}`}>Ver Detalle</Link>
-          </li>
-        ))}
-      </ul>
+    <div className="login-container">
+      <h2>Iniciar Sesión</h2>
+      <form onSubmit={handleSubmit}>
+        <label>Email</label>
+        <input type="email" placeholder="Ingresa tu email" required />
+        <label>Contraseña</label>
+        <input type="password" placeholder="Ingresa tu contraseña" required />
+        <button type="submit">Ingresar</button>
+        <button type="button">Registrarse</button>
+      </form>
     </div>
   );
 }

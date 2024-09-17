@@ -1,16 +1,12 @@
 "use client";
-
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Login() {
   const router = useRouter();
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Evitar que la página se recargue
-
-    // Aquí puedes agregar lógica adicional si es necesario
-
-    // Redirigir al usuario a la Home después de enviar el formulario
+    e.preventDefault();
     router.push("/");
   };
 
@@ -23,7 +19,9 @@ export default function Login() {
         <label>Contraseña</label>
         <input type="password" placeholder="Ingresa tu contraseña" required />
         <button type="submit">Ingresar</button>
+        <Link href={`/registrer/`}>Registrarse</Link>
       </form>
     </div>
   );
 }
+
