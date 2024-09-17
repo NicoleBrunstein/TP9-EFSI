@@ -11,7 +11,7 @@ export default function Logout() {
     // Aquí puedes borrar tokens o limpiar estados de autenticación
 
     // Redirigir al login después de "cerrar sesión"
-    router.push('/login');
+    router.push('/');
   }, [router]);
 
   return (
